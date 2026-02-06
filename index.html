@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mavi Göz. | Dijital Sınav Asistanı</title>
+    <title>Mavi Göz | Dijital Sınav Asistanı</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        /* Logo için hafif bir parlama efekti */
+        .logo-glow { filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5)); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-2xl font-bold text-blue-800 tracking-tight">MAVİ GÖZ</h1>
+    <nav class="p-4 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Mavi Göz Logo" class="h-12 w-12 rounded-full shadow-lg logo-glow">
+            <h1 class="text-2xl font-bold text-blue-800 tracking-tight">MAVİ GÖZ</h1>
+        </div>
         <div class="space-x-6 hidden md:block text-sm font-semibold text-gray-600">
             <a href="#ozellikler" class="hover:text-blue-600">Özellikler</a>
             <a href="#indir" class="hover:text-blue-600">Hakkımızda</a>
         </div>
-        <a href="DRIVE_DOSYA_LINKI" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md">Hemen İndir</a>
+        <a href="https://drive.google.com/uc?export=download&id=1ztIdLqqU8S9lVY0fWGJp6cZv-pfWDeA3" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md">Hemen İndir</a>
     </nav>
 
     <header class="hero-gradient text-white py-24 px-6 relative overflow-hidden">
@@ -27,7 +32,7 @@
             <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Sınav Kağıtlarını <br>Yapay Zeka ile Okuyun</h2>
             <p class="text-xl mb-10 opacity-90 max-w-2xl mx-auto">Karakter analizi ve piksel odaklı büyüterek okuma teknolojisiyle öğretmenlerin yeni sağ kolu.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="DRIVE_DOSYA_LINKI" class="bg-white text-blue-800 px-10 py-4 rounded-2xl font-bold shadow-xl hover:scale-105 transition">Ücretsiz Dene</a>
+                <a href="https://drive.google.com/uc?export=download&id=1ztIdLqqU8S9lVY0fWGJp6cZv-pfWDeA3" class="bg-white text-blue-800 px-10 py-4 rounded-2xl font-bold shadow-xl hover:scale-105 transition text-center">Ücretsiz Dene</a>
                 <button class="bg-blue-900 bg-opacity-30 border border-white border-opacity-40 px-10 py-4 rounded-2xl font-bold backdrop-blur-sm">Örnek Rapor Gör</button>
             </div>
         </div>
@@ -74,7 +79,7 @@
         <h2 class="text-4xl font-extrabold mb-4 text-blue-900 text-balance">Mavi Göz'ü Hemen Edinin</h2>
         <p class="text-gray-600 mb-12 max-w-lg mx-auto text-lg px-6">Dijital dönüşüme sınıfınızdan başlayın. Tanıtım sürümünü hemen indirebilirsiniz.</p>
         <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-            <a href="DRIVE_DOSYA_LINKI" class="bg-blue-600 text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-blue-700 transition flex items-center gap-3">
+            <a href="https://drive.google.com/uc?export=download&id=1ztIdLqqU8S9lVY0fWGJp6cZv-pfWDeA3" class="bg-blue-600 text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-blue-700 transition flex items-center gap-3">
                 <span class="text-2xl">🖥️</span> Windows İçin İndir (.exe)
             </a>
             
@@ -92,5 +97,4 @@
     </footer>
 
 </body>
-
 </html>
