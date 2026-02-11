@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <base href="/mavi-goz/uygulama/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Flet application.">
+  <meta name="description" content="Mavi Göz V4 - Yapay Zeka Destekli Sınav Asistanı">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="MaviGoz_V4">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon-192.png">
-
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>MaviGoz_V4</title>
+  <title>Mavi Göz V4</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     var flet = {
-      pyodide: true, // Web'de çalışması için True olmalı
+      pyodide: true,
       multiView: false,
       noCdn: false,
       webSocketEndpoint: "/ws",
-      entrypointBaseUrl: "./", // DEĞİŞTİ: / yerine ./
-      assetBase: "./",        // DEĞİŞTİ: / yerine ./
+      entrypointBaseUrl: "/mavi-goz/uygulama/", 
+      assetBase: "/mavi-goz/uygulama/",
       routeUrlStrategy: "path",
-      canvasKitBaseUrl: "canvaskit/", // DEĞİŞTİ: Baştaki / kalktı
-      pyodideUrl: "pyodide/pyodide.js", // DEĞİŞTİ: Baştaki / kalktı
+      canvasKitBaseUrl: "canvaskit/",
+      pyodideUrl: "pyodide/pyodide.js",
       webRenderer: "auto",
       fontFallbackBaseUrl: "assets/fonts/",
       appPackageUrl: "app.tar.gz"
@@ -41,12 +39,12 @@
   <script>
     flet.pyodide = true;
     flet.micropipIncludePre = false;
-    flet.pythonModuleName = "Mavi-Goz-V4";
+    flet.pythonModuleName = "Mavi-Goz-V4"; // Dosya adınızla uyumlu
     flet.noCdn = false;
     flet.webRenderer = "auto";
     flet.routeUrlStrategy = "path";
-    flet.entrypointBaseUrl = "./"; // DEĞİŞTİ
-    flet.assetBase = "./";        // DEĞİŞTİ
+    flet.entrypointBaseUrl = "/mavi-goz/uygulama/";
+    flet.assetBase = "/mavi-goz/uygulama/";
   </script>
 
   <script src="python.js"></script>
@@ -55,15 +53,14 @@
 <body>
   <div id="loading">
     <style>
-      body { inset: 0; overflow: hidden; margin: 0; padding: 0; position: fixed; }
-      #loading { align-items: center; display: flex; height: 100%; justify-content: center; width: 100%; }
-      #loading img { animation: 1s ease-in-out 0s infinite alternate breathe; opacity: .66; transition: opacity .4s; transform: scale(0.4); }
-      #loading.main_done img { opacity: 1; }
-      #loading.init_done img { animation: .33s ease-in-out 0s 1 forwards zooooom; opacity: .05; }
-      @keyframes breathe { from { transform: scale(0.4); opacity: 1.0; } to { transform: scale(0.35); opacity: .7; } }
-      @keyframes zooooom { from { transform: scale(0.4) } to { transform: scale(10) } }
+      body { inset: 0; overflow: hidden; margin: 0; padding: 0; position: fixed; background-color: #f8fafc; }
+      #loading { align-items: center; display: flex; height: 100%; justify-content: center; width: 100%; flex-direction: column; }
+      #loading img { animation: 1.5s ease-in-out 0s infinite alternate breathe; width: 100px; }
+      .loading-text { margin-top: 20px; font-family: 'Inter', sans-serif; color: #1e3a8a; font-weight: bold; }
+      @keyframes breathe { from { transform: scale(0.8); opacity: 1.0; } to { transform: scale(0.7); opacity: 0.6; } }
     </style>
-    <img src="icons/loading-animation.png" alt="Loading..." />
+    <img src="icons/loading-animation.png" alt="Mavi Göz Yükleniyor..." onerror="this.src='https://flet.dev/img/logo.svg'"/>
+    <div class="loading-text">Mavi Göz Hazırlanıyor, Lütfen Bekleyin...</div>
   </div>
   <script src="flutter_bootstrap.js" async></script>
 </body>
