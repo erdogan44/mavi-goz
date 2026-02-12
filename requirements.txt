@@ -1,0 +1,6 @@
+flet==0.80.5
+google-genai
+pandas
+pillow
+firebase-admin
+xlsxwriter
