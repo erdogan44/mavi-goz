@@ -2,7 +2,6 @@
 <html>
 <head>
   <base href="./">
-
   <meta charset="UTF-8">
   <title>Mavi V4</title>
 
@@ -11,15 +10,14 @@
       pyodide: true,
       multiView: false,
       noCdn: false,
-      // Buradaki yolları ./ yaparak uygulama klasörüne kilitledik
       entrypointBaseUrl: "./",
       assetBase: "./",
       routeUrlStrategy: "hash", 
       canvasKitBaseUrl: "canvaskit/",
       pyodideUrl: "pyodide/pyodide.js",
       webRenderer: "auto",
-      appPackageUrl: "app.tar.gz" # uygulama klasöründeki paketi görecek
-    }
+      appPackageUrl: "app.tar.gz"
+    };
 
     flet.flutterAppLoaded = new Promise((resolve) => {
       flet.flutterAppResolve = resolve;
@@ -37,6 +35,12 @@
 </head>
 <body>
   <div id="loading">
+    <style>
+      body { inset: 0; overflow: hidden; margin: 0; padding: 0; position: fixed; }
+      #loading { align-items: center; display: flex; height: 100%; justify-content: center; width: 100%; }
+      #loading img { animation: 1s ease-in-out 0s infinite alternate breathe; opacity: .66; }
+      @keyframes breathe { from { transform: scale(0.4); opacity: 1; } to { transform: scale(0.35); opacity: .7; } }
+    </style>
     <img src="icons/loading-animation.png" alt="Loading..." />
   </div>
   <script src="flutter_bootstrap.js" async></script>
