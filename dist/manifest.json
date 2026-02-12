@@ -1,6 +1,6 @@
 {
-  "name": "Mavi V4",
-  "short_name": "Mavi V4",
+  "name": "mavi-goz",
+  "short_name": "mavi-goz",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FFFFFF",
