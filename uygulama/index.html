@@ -3,6 +3,7 @@
 <head>
   <base href="./">
   <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <title>Mavi V4</title>
 
   <script>
@@ -12,11 +13,11 @@
       noCdn: false,
       entrypointBaseUrl: "./",
       assetBase: "./",
-      routeUrlStrategy: "hash", 
+      routeUrlStrategy: "hash",
       canvasKitBaseUrl: "canvaskit/",
       pyodideUrl: "pyodide/pyodide.js",
       webRenderer: "auto",
-      appPackageUrl: "app.tar.gz"
+      appPackageUrl: "app.tar.gz" // Hataya neden olan açıklama satırı temizlendi
     };
 
     flet.flutterAppLoaded = new Promise((resolve) => {
