@@ -1,6 +1,6 @@
-flet==0.80.5
-google-genai
+streamlit
 pandas
+httpx
 pillow
-firebase-admin
 xlsxwriter
+firebase-admin
